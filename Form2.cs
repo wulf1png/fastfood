@@ -25,5 +25,10 @@ namespace WindowsForms
             MyForm1.ShowDialog();
             Close(); 
         }
+
+        private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
