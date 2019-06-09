@@ -149,13 +149,14 @@
             // button3
             // 
             this.button3.AutoSize = true;
+            this.button3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.Location = new System.Drawing.Point(1051, 12);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(228, 34);
             this.button3.TabIndex = 9;
             this.button3.Text = "Выход";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // Form2

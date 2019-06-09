@@ -28,7 +28,7 @@ namespace WindowsForms
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
     }
 }

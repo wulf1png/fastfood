@@ -36,7 +36,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("a_AssuanTitulStrDst", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(984, 564);
+            this.button1.Location = new System.Drawing.Point(1002, 552);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(258, 78);
             this.button1.TabIndex = 1;
@@ -47,13 +47,14 @@
             // button3
             // 
             this.button3.AutoSize = true;
+            this.button3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.Location = new System.Drawing.Point(1052, 12);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(228, 34);
             this.button3.TabIndex = 6;
             this.button3.Text = "Выход";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // Form3
@@ -61,7 +62,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1292, 756);
+            this.ClientSize = new System.Drawing.Size(1292, 660);
             this.ControlBox = false;
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
