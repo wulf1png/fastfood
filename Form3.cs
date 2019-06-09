@@ -16,5 +16,14 @@ namespace WindowsForms
         {
             InitializeComponent();
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            Form3 frm = new Form3();
+            Form3.ActiveForm.Hide();
+            form1 MyForm1 = new form1();
+            MyForm1.ShowDialog();
+            Close(); 
+        }
     }
 }

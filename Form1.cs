@@ -21,12 +21,20 @@ namespace WindowsForms
 
         private void Button1_Click(object sender, EventArgs e)
         {
-
+            form1 frm = new form1();
+            form1.ActiveForm.Hide();
+            Form2 MyForm2 = new Form2();
+            MyForm2.ShowDialog();
+            Close(); ;
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-
+              form1 frm = new form1();
+            form1.ActiveForm.Hide();
+            Form3 MyForm3 = new Form3();
+            MyForm3.ShowDialog();
+            Close(); ;
         }
     }
 }

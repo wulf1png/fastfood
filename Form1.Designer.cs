@@ -110,7 +110,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "form1";
-            this.Text = "шаурма у алека";
+            this.Text = "Фастфудная";
             this.ResumeLayout(false);
             this.PerformLayout();
 
