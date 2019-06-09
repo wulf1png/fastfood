@@ -17,7 +17,10 @@ namespace WindowsForms
             InitializeComponent();
         }
 
- 
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
         private void Button1_Click(object sender, EventArgs e)
         {
@@ -25,27 +28,16 @@ namespace WindowsForms
             form1.ActiveForm.Hide();
             Form2 MyForm2 = new Form2();
             MyForm2.ShowDialog();
-            Close(); 
+            Close();
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-              form1 frm = new form1();
+            form1 frm = new form1();
             form1.ActiveForm.Hide();
             Form3 MyForm3 = new Form3();
             MyForm3.ShowDialog();
-            Close(); 
-        }
-
-        private void Button3_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            Close();
         }
     }
 }
- 

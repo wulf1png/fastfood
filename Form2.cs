@@ -35,5 +35,10 @@ namespace WindowsForms
         {
             Application.Exit();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

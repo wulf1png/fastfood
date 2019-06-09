@@ -182,6 +182,7 @@
             this.Name = "Form2";
             this.ShowIcon = false;
             this.Text = "Фастфудная";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
