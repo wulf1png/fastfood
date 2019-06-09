@@ -36,5 +36,10 @@ namespace WindowsForms
             MyForm3.ShowDialog();
             Close(); ;
         }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
