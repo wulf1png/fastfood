@@ -64,9 +64,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label1.Font = new System.Drawing.Font("a_AssuanTitulStrDst", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(67, 97);
+            this.label1.Location = new System.Drawing.Point(68, 97);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(470, 68);
             this.label1.TabIndex = 8;
@@ -122,6 +122,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "form1";
             this.Text = "Form4";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
