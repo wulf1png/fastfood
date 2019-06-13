@@ -42,6 +42,45 @@ namespace WindowsForms
 
         }
 
-        
+        private void Button2_Click(object sender, EventArgs e)
+        {
+                if (dataGridView1.Rows.Count > 1)
+                {
+                    MessageBox.Show("Очистите поле перед загрузкой нового файла.", "Ошибка.");
+                }
+                else
+                {
+                    if (File.Exists("C:\\Datasave.xml"))
+                    {
+                        DataSet ds = new DataSet(); 
+                        ds.ReadXml("C:\\Datasave.xml"); 
+
+                        foreach (DataRow item in ds.Tables["Datasave"].Rows)
+                        {
+                            int n = dataGridView1.Rows.Add(); 
+                            dataGridView1.Rows[n].Cells[0].Value = item["Longer"]; 
+                            dataGridView1.Rows[n].Cells[1].Value = item["Price"]; 
+                            dataGridView1.Rows[n].Cells[2].Value = item["Data"]; 
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("XML файл не найден.", "Ошибка.");
+                    }
+                }
+            }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.Rows.Count > 0)
+            {
+                dataGridView1.Rows.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Таблица пустая.", "Ошибка.");
+            }
+        }
     }
-}
+    }
+

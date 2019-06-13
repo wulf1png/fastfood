@@ -21,6 +21,9 @@ namespace WindowsForms
         private void Button3_Click(object sender, EventArgs e)
         {
             Application.Exit();
+
+
+            
         }
 
         private void Button1_Click(object sender, EventArgs e)
