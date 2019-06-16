@@ -191,6 +191,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -199,6 +201,7 @@
             this.Data});
             this.dataGridView1.Location = new System.Drawing.Point(22, 448);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(445, 215);
             this.dataGridView1.TabIndex = 16;
             // 
@@ -206,17 +209,20 @@
             // 
             this.Longer.HeaderText = "Продукт";
             this.Longer.Name = "Longer";
+            this.Longer.ReadOnly = true;
             this.Longer.Width = 150;
             // 
             // Cena
             // 
             this.Cena.HeaderText = "Цена";
             this.Cena.Name = "Cena";
+            this.Cena.ReadOnly = true;
             // 
             // Data
             // 
             this.Data.HeaderText = "Дата";
             this.Data.Name = "Data";
+            this.Data.ReadOnly = true;
             this.Data.Width = 150;
             // 
             // button7

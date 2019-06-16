@@ -37,13 +37,15 @@
             this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.zedGraph = new ZedGraph.ZedGraphControl();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("a_AssuanTitulStrDst", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(1002, 552);
+            this.button1.Location = new System.Drawing.Point(1011, 570);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(258, 78);
             this.button1.TabIndex = 1;
@@ -66,6 +68,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
@@ -75,10 +78,10 @@
             this.longer,
             this.Cena,
             this.Data});
-            this.dataGridView1.Location = new System.Drawing.Point(331, 22);
+            this.dataGridView1.Location = new System.Drawing.Point(41, 27);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(644, 608);
+            this.dataGridView1.Size = new System.Drawing.Size(644, 519);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
@@ -106,7 +109,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("a_AssuanTitulStrDst", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(47, 123);
+            this.button2.Location = new System.Drawing.Point(370, 570);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(258, 78);
             this.button2.TabIndex = 8;
@@ -117,13 +120,34 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("a_AssuanTitulStrDst", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(47, 225);
+            this.button4.Location = new System.Drawing.Point(41, 570);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(258, 78);
             this.button4.TabIndex = 9;
             this.button4.Text = "Очистить таблицу";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.Button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button5.Font = new System.Drawing.Font("a_AssuanTitulStrDst", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button5.Location = new System.Drawing.Point(710, 570);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(258, 78);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "Построить график";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
+            // 
+            // zedGraph
+            // 
+            this.zedGraph.IsShowPointValues = false;
+            this.zedGraph.Location = new System.Drawing.Point(721, 91);
+            this.zedGraph.Name = "zedGraph";
+            this.zedGraph.PointValueFormat = "G";
+            this.zedGraph.Size = new System.Drawing.Size(440, 410);
+            this.zedGraph.TabIndex = 13;
             // 
             // Form3
             // 
@@ -132,6 +156,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1292, 660);
             this.ControlBox = false;
+            this.Controls.Add(this.zedGraph);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
@@ -158,5 +184,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Data;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private ZedGraph.ZedGraphControl zedGraph;
     }
 }
