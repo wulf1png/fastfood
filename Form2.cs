@@ -71,11 +71,11 @@ namespace WindowsForms
 
         private void Button7_Click(object sender, EventArgs e)
         {
-                try
+            try
                 {
                     DataSet ds = new DataSet(); 
                     DataTable dt = new DataTable(); 
-                    dt.TableName = "Datasave"; 
+                    dt.TableName = "FastFood"; 
                     dt.Columns.Add("Longer"); 
                     dt.Columns.Add("Price");
                     dt.Columns.Add("Data");
@@ -83,13 +83,13 @@ namespace WindowsForms
 
                     foreach (DataGridViewRow r in dataGridView1.Rows)
                     {
-                        DataRow row = ds.Tables["Datasave"].NewRow();
+                        DataRow row = ds.Tables["FastFood"].NewRow();
                         row["Longer"] = r.Cells[0].Value;
                         row["Price"] = r.Cells[1].Value;
                         row["Data"] = r.Cells[2].Value;
-                        ds.Tables["Datasave"].Rows.Add(row);
+                        ds.Tables["FastFood"].Rows.Add(row);
                     }
-                    ds.WriteXml("C:\\Datasave.xml");
+                    ds.WriteXml("C:\\FastFood.xml");
             
                     MessageBox.Show("XML файл успешно сохранен.", "Выполнено.");
                 }

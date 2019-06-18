@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ZedGraph;
 
 namespace WindowsForms
 {
@@ -52,12 +51,12 @@ namespace WindowsForms
             }
             else
             {
-                if (File.Exists("C:\\Datasave.xml"))
+                if (File.Exists("C:\\FastFood.xml"))
                 {
                     DataSet ds = new DataSet();
-                    ds.ReadXml("C:\\Datasave.xml");
+                    ds.ReadXml("C:\\FastFood.xml");
 
-                    foreach (DataRow item in ds.Tables["Datasave"].Rows)
+                    foreach (DataRow item in ds.Tables["FastFood"].Rows)
                     {
                         int n = dataGridView1.Rows.Add();
                         dataGridView1.Rows[n].Cells[0].Value = item["Longer"];
@@ -84,46 +83,27 @@ namespace WindowsForms
             }
         }
 
-        private void Chart1_Click(object sender, EventArgs e)
-        {
-
-
-        }
+       
 
         private void Button5_Click(object sender, EventArgs e)
         {
-            zedGraph.GraphPane.CurveList.Clear();
-
-            double x = 0, y = 0;
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            chart1.Series[0].Points.Clear();
+            chart1.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            double x = 0.001;
+            const int N = 1000;
+            for (int i = 1; i < N; i++)
             {
-                try
-                {
-                    x = Convert.ToDouble(dataGridView1.Rows[i].Cells[0].Value);
-                    y = Convert.ToDouble(dataGridView1.Rows[i].Cells[2].Value);
-                }
-                catch (Exception)
-                {
-                    continue;
-                }
-
-
-                zedGraph.Invalidate();
-                PointPairList f1_list = new PointPairList();
-
-
-                f1_list.Add(x, y);
-                LineItem f1_curve = zedGraph.GraphPane.AddCurve(" ", f1_list, System.Drawing.Color.Red);
-                zedGraph.AxisChange();
-                zedGraph.Invalidate();
-
+                double y = (x - 0.0) * (x - 0.0);
+                chart1.Series[0].Points.AddXY(x, y);
+                x = x + 0.001;
             }
-
         }
 
     }
 
 }
+
+
         
     
 
